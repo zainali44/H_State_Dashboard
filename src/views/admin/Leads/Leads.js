@@ -14,7 +14,7 @@ const Leads = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch('http://18.233.67.37:3000/api/v1/leads');
+                const response = await fetch('http://18.233.67.37:8000/api/v1/leads');
                 const result = await response.json();
                 setData(result);
                 console.log('Data:', result);
@@ -35,7 +35,7 @@ const Leads = () => {
 
     const fetchComments = async (leadId) => {
         try {
-            const response = await fetch(`http://18.233.67.37:3000/api/v1/leads/${leadId}/comments`);
+            const response = await fetch(`http://18.233.67.37:8000/api/v1/leads/${leadId}/comments`);
             const result = await response.json();
             setComments(result);
             console.log('Comments:', result);
@@ -54,7 +54,7 @@ const Leads = () => {
             setNewMessage("");
 
             try {
-                await fetch(`http://18.233.67.37:3000/api/v1/leads/${selectedLead.lead_id}/comments`, {
+                await fetch(`http://18.233.67.37:8000/api/v1/leads/${selectedLead.lead_id}/comments`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',

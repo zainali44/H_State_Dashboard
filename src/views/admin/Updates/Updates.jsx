@@ -16,7 +16,7 @@ const Updates = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch('http://18.233.67.37:3000/api/v1/users/AllRequests/users');
+                const response = await fetch('http://18.233.67.37:8000/api/v1/users/AllRequests/users');
                 const result = await response.json();
                 setData(result);
                 console.log('Data:', result);
@@ -39,7 +39,7 @@ const Updates = () => {
     // Fetch Comments
     const fetchComments = async (requestId) => {
         try {
-            const response = await fetch(`http://18.233.67.37:3000/api/v1/users/requests/${requestId}/comments`);
+            const response = await fetch(`http://18.233.67.37:8000/api/v1/users/requests/${requestId}/comments`);
             const result = await response.json();
             setComments(result);
             console.log('Comments:', result);
@@ -61,7 +61,7 @@ const Updates = () => {
 
             // Send the comment to the API
             try {
-                await fetch(`http://18.233.67.37:3000/api/v1/users/requests/${selectedRequest.id}/comments`, {
+                await fetch(`http://18.233.67.37:8000/api/v1/users/requests/${selectedRequest.id}/comments`, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -79,7 +79,7 @@ const Updates = () => {
         try {
             console.log("selectedRequest", selectedRequest);
             await new Promise((resolve) => setTimeout(resolve, 5000));
-            axios.post("http://18.233.67.37:3000/api/v1/notifications", {
+            axios.post("http://18.233.67.37:8000/api/v1/notifications", {
                 PropertyID: selectedRequest.property_id,
                 userID : selectedRequest.userDetails.id,
                 title: "Update on your request",    

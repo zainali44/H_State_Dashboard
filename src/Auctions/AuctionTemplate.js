@@ -29,7 +29,7 @@ export default function AuctionPage() {
 
   const fetchAuctionDetails = async () => {
     try {
-      const response = await fetch('http://18.233.67.37:3000/api/v1/auctions/properties/' + AuctionID + '/auctions');
+      const response = await fetch('http://18.233.67.37:8000/api/v1/auctions/properties/' + AuctionID + '/auctions');
       const data = await response.json();
       console.log("data Details", data[0].status);
 

@@ -33,7 +33,7 @@ export function MembersTable() {
     useEffect(() => {
         const fetchInvestors = async () => {
             try {
-                const response = await fetch("http://18.233.67.37:3000/api/v1/users/investors");
+                const response = await fetch("http://18.233.67.37:8000/api/v1/users/investors");
                 const data = await response.json();
                 setInvestors(data);
                 setLoading(false);

@@ -15,7 +15,7 @@ const Intraction = () => {
     useEffect(() => {
         const fetchMessages = async () => {
             try {
-                const response = await axios.get('http://18.233.67.37:3000/api/v1/messages/' + id);
+                const response = await axios.get('http://18.233.67.37:8000/api/v1/messages/' + id);
                 setMessages(response.data);
                 console.log("Link: http://54.172.179.26:3000/api/v1/messages/" + id);
             } catch (error) {

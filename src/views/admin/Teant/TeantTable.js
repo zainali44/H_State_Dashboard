@@ -105,7 +105,7 @@ export function TeanantsTable() {
     setLoadingData(true);
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://18.233.67.37:3000/api/v1/tenants/${TeantID}/tenants`);
+        const response = await axios.get(`http://18.233.67.37:8000/api/v1/tenants/${TeantID}/tenants`);
         setTenantsData(response.data);
         console.log("Tenants data: ", response.data);
       } catch (error) {

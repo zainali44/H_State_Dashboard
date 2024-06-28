@@ -15,7 +15,7 @@ const Tickets = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch('http://18.233.67.37:3000/api/v1/tickets');
+                const response = await fetch('http://18.233.67.37:8000/api/v1/tickets');
                 const result = await response.json();
                 setTickets(result);
                 console.log('Data:', result);

@@ -38,7 +38,7 @@ export default function Details() {
         try {
             setLoading(true);  // Set loading state to true
             // Send to backend API
-            const response = await fetch('http://18.233.67.37:3000/api/v1/auctions/properties/' + AuctionID + '/auctions', 
+            const response = await fetch('http://18.233.67.37:8000/api/v1/auctions/properties/' + AuctionID + '/auctions', 
                  {
                 method: 'POST',
                 headers: {
@@ -65,7 +65,7 @@ export default function Details() {
         try {
             setLoading(true);  // Set loading state to true
             // Fetch from backend API
-            const response = await fetch('http://18.233.67.37:3000/api/v1/auctions/properties/' + AuctionID + '/auctions');
+            const response = await fetch('http://18.233.67.37:8000/api/v1/auctions/properties/' + AuctionID + '/auctions');
 
             if (!response.ok) {
                 throw new Error('Network response was not ok');

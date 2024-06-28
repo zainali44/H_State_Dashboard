@@ -25,7 +25,7 @@ const YourReactComponent = () => {
     const [disabledFields, setDisabledFields] = useState(true); // State to manage field disabling
 
     useEffect(() => {
-        fetch('http://18.233.67.37:3000/api/v1/users/prospects/' + id)
+        fetch('http://18.233.67.37:8000/api/v1/users/prospects/' + id)
             .then(response => response.json())
             .then(data => {
                 console.log(data);

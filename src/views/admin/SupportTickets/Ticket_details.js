@@ -14,7 +14,7 @@ const TicketDetails = () => {
 
     const getTicketDetails = async () => {
         try {
-            const response = await fetch(`http://18.233.67.37:3000/api/v1/tickets/${id}`);
+            const response = await fetch(`http://18.233.67.37:8000/api/v1/tickets/${id}`);
             if (!response.ok) {
                 throw new Error("Failed to fetch ticket details");
             }
@@ -45,7 +45,7 @@ const TicketDetails = () => {
 
         try {
             const response = await fetch( `
-                http://18.233.67.37:3000/api/v1/tickets/${ticket._id}/comment`, {
+                http://18.233.67.37:8000/api/v1/tickets/${ticket._id}/comment`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"

@@ -67,7 +67,7 @@ export default function Investor() {
             // Show success toast
             toast.success('Shared Successfully!');
             await new Promise((resolve) => setTimeout(resolve, 5000));
-            axios.post("http://18.233.67.37:3000/api/v1/notifications", {
+            axios.post("http://18.233.67.37:8000/api/v1/notifications", {
                 PropertyID: id,
                 userID : investorToUpdate.id,
                 title: "Property Shared",

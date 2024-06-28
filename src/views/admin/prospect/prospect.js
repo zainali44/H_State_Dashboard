@@ -15,7 +15,7 @@ const Prospect = () => {
     useEffect(() => {
         const fetchProspects = async () => {
             try {
-                const response = await fetch('http://18.233.67.37:3000/api/v1/users/prospects'); // Replace with your API endpoint
+                const response = await fetch('http://18.233.67.37:8000/api/v1/users/prospects'); // Replace with your API endpoint
                 const data = await response.json();
                 setProspects(data);
             } catch (error) {

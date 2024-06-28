@@ -18,12 +18,12 @@ const InvestorProfile = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await fetch('http://18.233.67.37:3000/api/v1/users/investors/' + id); // Fetch data from API
+                const response = await fetch('http://18.233.67.37:8000/api/v1/users/investors/' + id); // Fetch data from API
                 if (!response.ok) {
                     throw new Error('Failed to fetch data');
                 }
                 const data = await response.json();
-                console.log("Link: http://18.233.67.37:3000/api/v1/users/investors/" + id);
+                console.log("Link: http://18.233.67.37:8000/api/v1/users/investors/" + id);
 
                 setInvestorData(data); // Set fetched data to state
             } catch (error) {

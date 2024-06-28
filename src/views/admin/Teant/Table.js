@@ -147,7 +147,7 @@ export default function TenantManagementAndLeaseTable() {
         setLoadingData(true);
         const response = async () => {
 
-            const response = await axios.get(`http://18.233.67.37:3000/api/v1/tenants/${tenantID}/tenants`);
+            const response = await axios.get(`http://18.233.67.37:8000/api/v1/tenants/${tenantID}/tenants`);
             setTenantsData(response.data);
             console.log("Tenants data: ", tenantsData);
             setLoadingData(false);

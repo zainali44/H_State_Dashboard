@@ -63,7 +63,7 @@ function TopCreatorTable(props) {
     const fetchData = async () => {
       setLoading(true); // Set loading to true before fetch starts
       try {
-        const response = await fetch(`http://18.233.67.37:3000/api/v1/users/invest/${id}`);
+        const response = await fetch(`http://18.233.67.37:8000/api/v1/users/invest/${id}`);
         const result = await response.json();
         console.log("result", result);
 

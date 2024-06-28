@@ -18,7 +18,7 @@ export default function LeaseManagement() {
     const fetchLeaseDetails = async () => {
         setLoading(true);
         try {
-            const response = await axios.get(`http://18.233.67.37:3000/api/v1/tenants/${tenantID}/tenants`);
+            const response = await axios.get(`http://18.233.67.37:8000/api/v1/tenants/${tenantID}/tenants`);
             const data = response.data;
             setStartDate(data[0].start_date|| "");
             setEndDate(data[0].end_date || "");
@@ -38,7 +38,7 @@ export default function LeaseManagement() {
     const saveLeaseDetails = async () => {
         setLoading(true);
         try {
-            const response = await axios.post(`http://18.233.67.37:3000/api/v1/tenants/${tenantID}`, {
+            const response = await axios.post(`http://18.233.67.37:8000/api/v1/tenants/${tenantID}`, {
                 start_date: startDate,
                 end_date: endDate,
                 lease_type: leaseType,

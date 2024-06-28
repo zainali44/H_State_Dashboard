@@ -13,7 +13,7 @@ const DistributionTable = () => {
 
     useEffect(() => {
         // Replace 'API_URL' with your actual API endpoint
-        axios.get(`http://18.233.67.37:3000/api/v1/distribution/${id}/distributions`)
+        axios.get(`http://18.233.67.37:8000/api/v1/distribution/${id}/distributions`)
             .then(response => {
                 setData(response.data);
                 setLoading(false);

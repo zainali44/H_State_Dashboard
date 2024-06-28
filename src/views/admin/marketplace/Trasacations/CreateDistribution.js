@@ -77,7 +77,7 @@ const NewDistribution = () => {
         e.preventDefault();
         setLoading(true);
         try {
-            const response = await axios.post('http://18.233.67.37:3000/api/v1/distribution', formData);
+            const response = await axios.post('http://18.233.67.37:8000/api/v1/distribution', formData);
             console.log('Distribution created:', response.data);
         } catch (error) {
             console.error('Error creating distribution:', error);
@@ -94,7 +94,7 @@ const NewDistribution = () => {
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await fetch(`http://18.233.67.37:3000/api/v1/users/invest/${id}`);
+                const response = await fetch(`http://18.233.67.37:8000/api/v1/users/invest/${id}`);
                 const result = await response.json();
                 const formattedData = result.map(item => ({
                     name: item.userDetails.name,                    
