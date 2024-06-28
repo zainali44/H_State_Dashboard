@@ -1,0 +1,32 @@
+[
+  {
+    "name": ["@Jenny", false],
+    "investment": 2458,
+    "date": "Apr 26, 2022",
+    "progress": 75.5
+  },
+  {
+    "name": ["@Jenny", true],
+    "investment": 1485,
+    "date": "Jul 20, 2022",
+    "progress": 35.4
+  },
+  {
+    "name": ["@Zain", true],
+    "investment": 1024,
+    "date": "Sep 30, 2022",
+    "progress": 25
+  },
+  {
+    "name": ["@Jenny", true],
+    "investment": 858,
+    "date": "Oct 24, 2022",
+    "progress": 100
+  },
+  {
+    "name": ["@Zain", true],
+    "investment": 258,
+    "date": "Nov 29, 2022",
+    "progress": 75.5
+  }
+]
